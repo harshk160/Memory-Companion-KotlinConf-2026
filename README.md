@@ -346,7 +346,7 @@ After adding a memory:
 
 | Platform | Device/OS | Status |
 |----------|-----------|--------|
-| Android | Xiaomi Physical Device (Android 13) | ✅ Fully Working |
+| Android | Xiaomi Physical Device (Android 12) | ✅ Fully Working |
 | Android | Pixel 6 Emulator (API 34) | ✅ Working (voice may not work on emulator) |
 | Windows | Windows 11 Desktop | ✅ Working (except voice input) |
 
@@ -495,7 +495,7 @@ Potential enhancements for v2.0:
 
 ## Contributing
 
-This project was built for the **KotlinConf 2026 Contest**, but contributions are welcome!
+This project was built for the **Kotlin Multiplatform Contest**, but contributions are welcome!
 
 ### How to Contribute
 
@@ -528,8 +528,8 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 **Harsh Kumar**
 
 - GitHub: [@harshk160](https://github.com/harshk160)
-- Email: harsh.k160@example.com
-- LinkedIn: [Harsh Kumar](https://linkedin.com/in/harsh-kumar)
+- Email: harshkr1608@gmail.com
+- LinkedIn: [Harsh Kumar](https://www.linkedin.com/in/harsh-kumar-30a45928b/)
 
 ---
 
@@ -545,11 +545,10 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ## Contest Submission
 
-- **Contest:** KotlinConf 2026 Global Contest
+- **Contest:** Kotlin Multiplatform Contest
 - **Category:** Kotlin Multiplatform
-- **Submission Date:** January 2026
+- **Submission Date:** 12 January 2026
 - **Repository:** [github.com/harshk160/Memory-Companion-KotlinConf-2026](https://github.com/harshk160/Memory-Companion-KotlinConf-2026)
-- **Demo Video:** [YouTube Link - Coming Soon]
 
 ---
 
@@ -560,7 +559,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 - **Code Sharing:** 90%+ between platforms
 - **Dependencies:** 10 major libraries
 - **Build Time:** ~3 minutes (Android), ~1 minute (Desktop)
-- **App Size:** ~25MB (Android APK), ~80MB (Windows installer)
+- **App Size:** ~27MB (Android APK), ~101MB (Windows installer)
 
 ---
 
