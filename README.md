@@ -8,12 +8,6 @@
 
 ![Memory Companion Banner](screenshots/01-person-list.png)
 
-## Demo Video
-
-**Watch the full demo:** [YouTube Demo Video - Coming Soon]
-
-> A 3-minute walkthrough showing voice input, AI analysis, natural language queries, and cross-platform capabilities.
-
 ---
 
 ## The Problem
