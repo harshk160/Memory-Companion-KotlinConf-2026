@@ -6,7 +6,9 @@
 [![Compose Multiplatform](https://img.shields.io/badge/Compose%20Multiplatform-1.7.0-brightgreen)](https://www.jetbrains.com/lp/compose-multiplatform/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-![Memory Companion Banner](screenshots/01-person-list.png)
+<div align="center">
+  <img src="screenshots/01-person-list.png" alt="Memory Companion Banner" width="700"/>
+</div>
 
 ---
 
@@ -33,11 +35,13 @@ Memory Companion makes capturing and querying personal memories **effortless and
 
 ### Voice Input - Speak, Don't Type
 
-![Voice Input](screenshots/02-voice-input.png)
+<div align="center">
+  <img src="screenshots/02-voice-input.png" alt="Voice Input" width="600"/>
+</div>
 
 Press and hold the microphone button. Speak naturally:
 
-> "I had lunch with Sarah today at the Italian restaurant. She told me about her new project deadline next Friday and she's feeling stressed about the budget."
+> *"I had lunch with Sarah today at the Italian restaurant. She told me about her new project deadline next Friday and she's feeling stressed about the budget."*
 
 The app transcribes everything automatically using platform-native speech recognition. **No typing required.**
 
@@ -45,7 +49,9 @@ The app transcribes everything automatically using platform-native speech recogn
 
 ### AI Analysis - Automatic Context Extraction
 
-![AI Review](screenshots/03-ai-review.png)
+<div align="center">
+  <img src="screenshots/03-ai-review.png" alt="AI Review" width="600"/>
+</div>
 
 Powered by **Google Gemini AI**, the app automatically extracts:
 
@@ -62,7 +68,9 @@ Powered by **Google Gemini AI**, the app automatically extracts:
 
 ### Ethical Design - You Stay in Control
 
-![Consent Screen](screenshots/03-ai-review.png)
+<div align="center">
+  <img src="screenshots/03-ai-review.png" alt="Consent Screen" width="600"/>
+</div>
 
 **Nothing is saved without your explicit approval.**
 
@@ -77,14 +85,16 @@ This isn't just a feature - it's a core design principle. Your memories, your co
 
 ### Smart Queries - Ask in Natural Language
 
-![Chat Query](screenshots/05-chat-query.png)
+<div align="center">
+  <img src="screenshots/05-chat-query.png" alt="Chat Query" width="600"/>
+</div>
 
 No need to search manually. Just ask:
 
-- "When is Sarah's project deadline?"
-- "What is John stressed about?"
-- "Who did I meet last week?"
-- "What did Sarah tell me about the budget?"
+- *"When is Sarah's project deadline?"*
+- *"What is John stressed about?"*
+- *"Who did I meet last week?"*
+- *"What did Sarah tell me about the budget?"*
 
 The AI searches your memories and provides **answers with source citations**. Tap to expand and see exactly which memories were used.
 
@@ -92,18 +102,24 @@ The AI searches your memories and provides **answers with source citations**. Ta
 
 ### Cross-Platform - One Codebase, Two Platforms
 
-![Desktop Version](screenshots/06-desktop-version.png)
+<div align="center">
+  <img src="screenshots/06-desktop-version.png" alt="Desktop Version" width="700"/>
+</div>
 
 Built with **Kotlin Multiplatform** - not a web wrapper, not a hybrid app. **Real native performance** on both platforms.
 
+<div align="center">
+
 | Feature | Android | Windows Desktop |
-|---------|---------|-----------------|
+|:--------|:-------:|:---------------:|
 | Person Management | ✅ | ✅ |
 | Memory Storage | ✅ | ✅ |
 | AI Analysis (Gemini) | ✅ | ✅ |
 | Natural Language Chat | ✅ | ✅ |
-| Voice Input | ✅ | ⚠️ Not yet (graceful error) |
+| Voice Input | ✅ | ⚠️ Not yet |
 | Offline-First Database | ✅ | ✅ |
+
+</div>
 
 **90%+ code sharing.** Single team, single codebase, multiple platforms.
 
@@ -113,21 +129,32 @@ Built with **Kotlin Multiplatform** - not a web wrapper, not a hybrid app. **Rea
 
 ### Core Technologies
 
-- **Kotlin 2.0.21** - Modern, type-safe language
-- **Kotlin Multiplatform (KMP)** - Shared business logic across platforms
-- **Jetpack Compose Multiplatform 1.7.0** - Declarative UI framework
+<table>
+<tr>
+<td width="50%">
 
-### Architecture
+**Language & Framework**
+- Kotlin 2.0.21
+- Kotlin Multiplatform (KMP)
+- Jetpack Compose Multiplatform 1.7.0
 
-- **MVVM Pattern** - Clear separation of concerns
-- **Clean Architecture** - UI → ViewModel → Repository → Data Source
-- **Unidirectional Data Flow** - Predictable state management
-- **Reactive Programming** - Kotlinx Flow for real-time updates
+</td>
+<td width="50%">
+
+**Architecture**
+- MVVM Pattern
+- Clean Architecture
+- Unidirectional Data Flow
+- Reactive Programming (Flow)
+
+</td>
+</tr>
+</table>
 
 ### Key Libraries
 
 | Library | Purpose | Version |
-|---------|---------|---------|
+|---------|---------|:-------:|
 | **Room** | Local SQLite database with KMP support | 2.7.0-alpha01 |
 | **Ktor** | HTTP client for Gemini API | Latest |
 | **Koin** | Dependency injection | Latest |
@@ -191,7 +218,7 @@ actual class SpeechRecognizer {
 }
 ```
 
-This pattern is used for:
+**This pattern is used for:**
 - Speech recognition
 - Database builders
 - API key storage (BuildConfig vs System properties)
@@ -231,11 +258,12 @@ Create a `local.properties` file in the project root directory:
 GEMINI_API_KEY=AIzaSyXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 ```
 
-**Important:** This file is already in `.gitignore`. Never commit your API key to version control!
+> **⚠️ Important:** This file is already in `.gitignore`. Never commit your API key to version control!
 
 ### Step 4: Build & Run
 
-#### Option A: Android
+<details>
+<summary><b>Android</b></summary>
 
 **Using Android Studio:**
 1. Open the project in Android Studio
@@ -252,9 +280,12 @@ GEMINI_API_KEY=AIzaSyXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 adb install composeApp/build/outputs/apk/debug/composeApp-debug.apk
 ```
 
-#### Option B: Windows Desktop
+</details>
 
-**Important:** Requires a **full JDK** (not Android Studio's embedded JDK).
+<details>
+<summary><b>Windows Desktop</b></summary>
+
+> **Note:** Requires a full JDK (not Android Studio's embedded JDK).
 
 **Using Command Line:**
 ```bash
@@ -270,12 +301,14 @@ The installer will be generated at:
 composeApp/build/compose/binaries/main/msi/Memory-Companion-1.0.0.msi
 ```
 
-**Troubleshooting Desktop Build:**
-If `packageDistributionForCurrentOS` fails with "jpackage.exe missing":
+**Troubleshooting:**
+If build fails with "jpackage.exe missing":
 1. Download [Eclipse Temurin JDK 17](https://adoptium.net/)
 2. In Android Studio: File → Settings → Build Tools → Gradle
 3. Set Gradle JDK to your installed Temurin JDK
 4. Re-run the build
+
+</details>
 
 ---
 
@@ -285,36 +318,45 @@ If `packageDistributionForCurrentOS` fails with "jpackage.exe missing":
 
 1. Launch the app
 2. **(Android only)** Grant microphone permission when prompted
-3. You'll see an empty person list
+3. You'll see an empty person list - let's add your first person!
 
 ### Adding Your First Person
 
-1. Tap the **+** (plus) button at the bottom
+1. Tap the **+** button at the bottom
 2. Enter a name (e.g., "Sarah")
 3. Tap **Add**
 
-### Recording a Memory (Voice Input)
+### Recording a Memory
+
+<details>
+<summary><b>Using Voice Input (Recommended)</b></summary>
 
 1. Tap the **Add Memory** button
 2. Select a person from the dropdown
 3. **Press and hold** the microphone button
-4. **Speak clearly:** "I had coffee with Sarah and she mentioned her vacation plans for March"
+4. **Speak clearly:** *"I had coffee with Sarah and she mentioned her vacation plans for March"*
 5. Release the button
 6. The transcribed text appears instantly
 
-### Recording a Memory (Text Input)
+</details>
+
+<details>
+<summary><b>Using Text Input</b></summary>
 
 1. Tap the **Add Memory** button
 2. Select a person from the dropdown
 3. Type in the large text field
-4. Text will be analyzed when you proceed
+4. The text will be analyzed when you proceed
+
+</details>
 
 ### Reviewing AI Analysis
 
-After adding a memory:
-1. Review the AI-extracted information (topic, emotion, etc.)
-2. **Edit any field** if the AI got something wrong
-3. Choose:
+After adding a memory, you'll see the AI review screen:
+
+1. **Review** the AI-extracted information (topic, emotion, deadlines, etc.)
+2. **Edit** any field if the AI got something wrong
+3. Choose one of three options:
    - **Confirm & Save** - Saves to database
    - **Edit** - Toggle edit mode for corrections
    - **Discard** - Go back without saving
@@ -322,7 +364,7 @@ After adding a memory:
 ### Querying Your Memories
 
 1. Tap the **Chat** button
-2. Ask a question: "When did I last talk to Sarah?"
+2. Ask a question: *"When did I last talk to Sarah?"*
 3. Wait for the AI to search and respond
 4. Tap **"source memories"** to see which memories were used
 
@@ -339,34 +381,40 @@ After adding a memory:
 ### Tested Configurations
 
 | Platform | Device/OS | Status |
-|----------|-----------|--------|
+|----------|-----------|:------:|
 | Android | Xiaomi Physical Device (Android 12) | ✅ Fully Working |
-| Android | Pixel 6 Emulator (API 34) | ✅ Working (voice may not work on emulator) |
-| Windows | Windows 11 Desktop | ✅ Working (except voice input) |
+| Android | Pixel 6 Emulator (API 34) | ✅ Working* |
+| Windows | Windows 11 Desktop | ✅ Working** |
+
+**\*Voice may not work on emulator**  
+**\*\*Except voice input (graceful error shown)**
 
 ### Known Limitations
 
-- Voice input requires **Google Play Services** on Android
-- Desktop voice input not yet implemented (shows user-friendly error message)
-- Some Android emulators don't support speech recognition (use real device)
-- Requires internet connection for AI analysis (memories stored offline)
+- Voice input requires Google Play Services on Android
+- Desktop voice input not yet implemented (shows user-friendly error)
+- Some Android emulators don't support speech recognition
+- Internet connection required for AI analysis (memories stored offline)
 
-### Performance
+### Performance Metrics
 
-- Tested with 50+ memories - smooth performance
-- Database operations under 100ms
-- AI analysis typically completes in 2-5 seconds
-- Memory usage stable under 150MB
+- ✅ Tested with 50+ memories - smooth performance
+- ✅ Database operations under 100ms
+- ✅ AI analysis typically completes in 2-5 seconds
+- ✅ Memory usage stable under 150MB
 
 ---
 
 ## Project Structure
 
+<details>
+<summary><b>Click to expand full project structure</b></summary>
+
 ```
 memory-companion/
 ├── composeApp/
 │   ├── src/
-│   │   ├── androidMain/              # Android-specific
+│   │   ├── androidMain/              # Android-specific (5%)
 │   │   │   └── kotlin/
 │   │   │       └── com/harsh/myapplication/
 │   │   │           ├── MainActivity.kt
@@ -375,7 +423,7 @@ memory-companion/
 │   │   │               ├── local/DatabaseBuilder.android.kt
 │   │   │               └── speech/SpeechRecognizer.android.kt
 │   │   │
-│   │   ├── jvmMain/                  # Desktop-specific
+│   │   ├── jvmMain/                  # Desktop-specific (5%)
 │   │   │   └── kotlin/
 │   │   │       └── com/harsh/myapplication/
 │   │   │           ├── main.kt
@@ -406,67 +454,93 @@ memory-companion/
 └── LICENSE
 ```
 
-**Code Statistics:**
-- ~3,500 lines of Kotlin code
-- 90%+ code shared between platforms
-- 6 main screens
-- 4 reusable components
-- 5 ViewModels
-- 2 repositories
-- Clean architecture with clear separation
+</details>
+
+### Code Statistics
+
+- **Total Lines:** ~3,500 lines of Kotlin code
+- **Code Sharing:** 90%+ between platforms
+- **Screens:** 6 main screens
+- **Components:** 4 reusable components
+- **ViewModels:** 5 ViewModels
+- **Repositories:** 2 repositories
 
 ---
 
 ## Privacy & Security
 
 ### Data Storage
-- All data stored **locally** in SQLite database
-- No cloud sync (your data never leaves your device)
-- No user accounts or authentication required
-- Gemini API calls send memory text for analysis (see API key security)
+- ✅ All data stored **locally** in SQLite database
+- ✅ No cloud sync (your data never leaves your device)
+- ✅ No user accounts or authentication required
+- ⚠️ Gemini API calls send memory text for analysis
 
 ### API Key Security
-- API key stored in `local.properties` (gitignored)
-- Injected at **build time** via Gradle
-- Never hardcoded in source code
-- Platform-specific access:
-  - Android: `BuildConfig.GEMINI_API_KEY`
-  - Desktop: `System.getProperty("gemini.api.key")`
+- ✅ API key stored in `local.properties` (gitignored)
+- ✅ Injected at **build time** via Gradle
+- ✅ Never hardcoded in source code
+- ✅ Platform-specific secure access
 
 ### User Consent
-- AI analysis shown to user **before** saving
-- User can **edit or reject** any AI-generated content
-- Explicit **"Confirm & Save"** button required
-- No automatic background processing
-- Transparent about what data is stored
+- ✅ AI analysis shown to user **before** saving
+- ✅ User can **edit or reject** any AI-generated content
+- ✅ Explicit **"Confirm & Save"** button required
+- ✅ No automatic background processing
 
 ---
 
 ## Troubleshooting
 
-### "Unresolved reference: GEMINI_API_KEY"
-- Create `local.properties` file in project root
-- Add: `GEMINI_API_KEY=your_actual_key_here`
-- Sync Gradle
+<details>
+<summary><b>"Unresolved reference: GEMINI_API_KEY"</b></summary>
 
-### Voice input shows "Permission denied"
-- Grant microphone permission in Android settings
-- Check: Settings → Apps → Memory Companion → Permissions → Microphone
+**Solution:**
+1. Create `local.properties` file in project root
+2. Add: `GEMINI_API_KEY=your_actual_key_here`
+3. Sync Gradle in Android Studio
 
-### Desktop app won't build (jpackage missing)
-- Install full JDK 17 (Eclipse Temurin)
-- Set Gradle JDK in Android Studio settings
-- Don't use Android Studio's embedded JDK
+</details>
 
-### Emulator voice input not working
-- This is expected - use a real Android device
-- Most emulators don't support speech recognition
-- You can still type memories manually
+<details>
+<summary><b>Voice input shows "Permission denied"</b></summary>
 
-### "Network error" when analyzing memory
-- Check internet connection
-- Verify API key is correct
-- Check Gemini API quota (free tier limits)
+**Solution:**
+1. Open Android Settings
+2. Go to: Settings → Apps → Memory Companion → Permissions
+3. Enable **Microphone** permission
+
+</details>
+
+<details>
+<summary><b>Desktop app won't build (jpackage missing)</b></summary>
+
+**Solution:**
+1. Install full [Eclipse Temurin JDK 17](https://adoptium.net/)
+2. In Android Studio: File → Settings → Build Tools → Gradle
+3. Set Gradle JDK to your Temurin installation
+4. Don't use Android Studio's embedded JDK
+
+</details>
+
+<details>
+<summary><b>Emulator voice input not working</b></summary>
+
+**This is expected behavior:**
+- Most Android emulators don't support speech recognition
+- Use a real physical device for voice input testing
+- You can still type memories manually on emulator
+
+</details>
+
+<details>
+<summary><b>"Network error" when analyzing memory</b></summary>
+
+**Check these:**
+- ✅ Internet connection is active
+- ✅ API key is correct in `local.properties`
+- ✅ Gemini API quota not exceeded (free tier has limits)
+
+</details>
 
 ---
 
@@ -474,16 +548,16 @@ memory-companion/
 
 Potential enhancements for v2.0:
 
-- iOS Support - Extend to Apple ecosystem
-- Cloud Sync - Encrypted backup and multi-device sync
-- Desktop Voice Input - Using third-party library
-- Photo Attachments - Add images to memories
-- Timeline View - Visual calendar of memories
-- Smart Reminders - "You haven't checked in with Sarah in 2 weeks"
-- Analytics Dashboard - Insights about your social connections
-- Multi-language Support - Internationalization
-- Export Features - PDF/CSV export for backup
-- End-to-End Encryption - For cloud sync
+- [ ] **iOS Support** - Extend to Apple ecosystem
+- [ ] **Cloud Sync** - Encrypted backup and multi-device sync
+- [ ] **Desktop Voice Input** - Using third-party library
+- [ ] **Photo Attachments** - Add images to memories
+- [ ] **Timeline View** - Visual calendar of memories
+- [ ] **Smart Reminders** - "You haven't checked in with Sarah in 2 weeks"
+- [ ] **Analytics Dashboard** - Insights about your social connections
+- [ ] **Multi-language Support** - Internationalization
+- [ ] **Export Features** - PDF/CSV export for backup
+- [ ] **End-to-End Encryption** - For cloud sync
 
 ---
 
@@ -513,17 +587,19 @@ This project was built for the **Kotlin Multiplatform Contest**, but contributio
 
 This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
-**TL;DR:** You can use, modify, and distribute this code freely, even commercially. Just include the original copyright notice.
-
 ---
 
 ## Author
 
 **Harsh Kumar**
 
-- GitHub: [@harshk160](https://github.com/harshk160)
-- Email: harshkr1608@gmail.com
-- LinkedIn: [Harsh Kumar](https://www.linkedin.com/in/harsh-kumar-30a45928b/)
+<div align="center">
+
+[![GitHub](https://img.shields.io/badge/GitHub-harshk160-181717?style=for-the-badge&logo=github)](https://github.com/harshk160)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Harsh%20Kumar-0077B5?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/harsh-kumar-30a45928b/)
+[![Email](https://img.shields.io/badge/Email-harshkr1608%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:harshkr1608@gmail.com)
+
+</div>
 
 ---
 
@@ -532,39 +608,53 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 - **Google Gemini AI** - For powerful natural language processing capabilities
 - **JetBrains** - For Kotlin Multiplatform and Compose Multiplatform
 - **Android Community** - For excellent KMP resources and documentation
-- **KotlinConf 2026 Contest** - For the motivation to build this project
+- **Kotlin Multiplatform Contest** - For the motivation to build this project
 - **Open Source Community** - For the libraries that made this possible
 
 ---
 
 ## Contest Submission
 
-- **Contest:** Kotlin Multiplatform Contest
-- **Category:** Kotlin Multiplatform
-- **Submission Date:** 12 January 2026
-- **Repository:** [github.com/harshk160/Memory-Companion-KotlinConf-2026](https://github.com/harshk160/Memory-Companion-KotlinConf-2026)
-
----
-
-## Stats & Metrics
-
-- **Development Time:** 6 weeks (Dec 2025 - Jan 2026)
-- **Lines of Code:** ~3,500
-- **Code Sharing:** 90%+ between platforms
-- **Dependencies:** 10 major libraries
-- **Build Time:** ~3 minutes (Android), ~1 minute (Desktop)
-- **App Size:** ~27MB (Android APK), ~101MB (Windows installer)
-
----
-
 <div align="center">
 
-**Built with Kotlin Multiplatform**
-
-[Report Bug](https://github.com/harshk160/Memory-Companion-KotlinConf-2026/issues) · [Request Feature](https://github.com/harshk160/Memory-Companion-KotlinConf-2026/issues) · [Documentation](https://github.com/harshk160/Memory-Companion-KotlinConf-2026/wiki)
+| Item | Details |
+|:-----|:--------|
+| **Contest** | Kotlin Multiplatform Contest |
+| **Category** | Kotlin Multiplatform |
+| **Submission Date** | January 12, 2026 |
+| **Repository** | [github.com/harshk160/Memory-Companion-KotlinConf-2026](https://github.com/harshk160/Memory-Companion-KotlinConf-2026) |
 
 </div>
 
 ---
 
-*Last Updated: January 11, 2026*
+## Stats & Metrics
+
+<div align="center">
+
+| Metric | Value |
+|:-------|:------|
+| **Development Time** | 6 weeks (Dec 2025 - Jan 2026) |
+| **Lines of Code** | ~3,500 |
+| **Code Sharing** | 90%+ between platforms |
+| **Dependencies** | 10 major libraries |
+| **Build Time** | 3 min (Android) / 1 min (Desktop) |
+| **App Size** | 27MB (APK) / 101MB (MSI) |
+
+</div>
+
+---
+
+<div align="center">
+
+### Built with ❤️ using Kotlin Multiplatform
+
+[Report Bug](https://github.com/harshk160/Memory-Companion-KotlinConf-2026/issues) · [Request Feature](https://github.com/harshk160/Memory-Companion-KotlinConf-2026/issues)
+
+---
+
+**⭐ Star this repo if you found it useful!**
+
+*Last Updated: January 12, 2026*
+
+</div>
